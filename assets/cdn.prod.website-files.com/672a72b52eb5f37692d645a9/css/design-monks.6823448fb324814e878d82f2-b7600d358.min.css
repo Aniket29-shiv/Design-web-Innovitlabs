@@ -509,6 +509,16 @@ figure {
 .container-1252px.h-full {
   height: 100%;
 }
+.faq-ans-block {
+    display: block; 
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease-out;
+}
+
+.faq-q-icon-wrap {
+    transition: transform 0.3s ease;
+}
 .button-primary-icon {
   object-fit: contain;
   width: 100%;

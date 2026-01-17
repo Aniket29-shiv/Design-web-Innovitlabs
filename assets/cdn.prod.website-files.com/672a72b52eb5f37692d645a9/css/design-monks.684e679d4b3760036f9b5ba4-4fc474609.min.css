@@ -524,6 +524,16 @@ figure {
 .w-checkbox-input--inputType-custom.w--redirected-focus {
   box-shadow: 0 0 3px 1px #3898ec;
 }
+.faq-ans-block {
+    display: block; 
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease-out;
+}
+
+.faq-q-icon-wrap {
+    transition: transform 0.3s ease;
+}
 .button-primary-icon {
   object-fit: contain;
   width: 100%;

@@ -3619,6 +3619,24 @@ a,
         },
       });
     </script>
+    <script>
+document.querySelectorAll('.faq-qa-wrap').forEach(item => {
+    item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-ans-block');
+        const icon = item.querySelector('.faq-q-icon-wrap');
+
+        // Toggle the height
+        if (answer.style.height === "0px" || !answer.style.height) {
+            // Set to scrollHeight so it grows to fit the text
+            answer.style.height = answer.scrollHeight + "px";
+            icon.style.transform = "rotate(180deg)";
+        } else {
+            answer.style.height = "0px";
+            icon.style.transform = "rotate(0deg)";
+        }
+    });
+});
+</script>
   </body>
   <!-- Mirrored from www.designmonks.co/services/ai-product-design by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Dec 2025 11:29:49 GMT -->
 </html>

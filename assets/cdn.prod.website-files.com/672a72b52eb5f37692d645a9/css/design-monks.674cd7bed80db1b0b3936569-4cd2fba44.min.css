@@ -359,6 +359,8 @@
   --color--navbar--btn-border-width: 1px;
 }
 body {
+  overflow-x: hidden;
+  width: 100%;
   background-color: var(--_theme---base--surface--surface);
   font-family: var(--_typography---font--family--body);
   color: #333;

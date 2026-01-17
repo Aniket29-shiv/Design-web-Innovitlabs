@@ -3146,36 +3146,7 @@ a,
                       </div>
                     </div>
                   </div>
-                  <div class="services-button-wrapper">
-                    <a
-                      href="https://calendly.com/innovitlabs24/innovit_labs"
-                      class="contact-button-wapper w-inline-block"
-                      ><div
-                        class="ae-element_item-glow-wrapper pointer-events-off"
-                      >
-                        <div class="ae-element_item-glow"></div>
-                      </div>
-                      <div
-                        class="ae-element_item-background pointer-events-off animation-off"
-                      ></div>
-                      <div class="ae-element_item-content z-index-2">
-                        <div class="button-primary-inside">
-                          <div class="button-primary-text">Book a Call</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/672a72b52eb5f37692d645a9/67adba6a3ab018a0349e2bc2_CTA Arrow (2).svg"
-                            loading="lazy"
-                            alt=""
-                            class="button-primary-icon"
-                          />
-                        </div>
-                      </div>
-                      <img
-                        src="https://cdn.prod.website-files.com/672a72b52eb5f37692d645a9/672a7a8e3a6aba070d15d4c0_Star 6.avif"
-                        loading="lazy"
-                        alt=""
-                        class="image"
-                    /></a>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -6105,5 +6076,23 @@ a,
         document.addEventListener("keydown", enableHover);
       });
     </script>
+    <script>
+document.querySelectorAll('.faq-qa-wrap').forEach(item => {
+    item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-ans-block');
+        const icon = item.querySelector('.faq-q-icon-wrap');
+
+        // Toggle the height
+        if (answer.style.height === "0px" || !answer.style.height) {
+            // Set to scrollHeight so it grows to fit the text
+            answer.style.height = answer.scrollHeight + "px";
+            icon.style.transform = "rotate(180deg)";
+        } else {
+            answer.style.height = "0px";
+            icon.style.transform = "rotate(0deg)";
+        }
+    });
+});
+</script>
   </body>
 </html>

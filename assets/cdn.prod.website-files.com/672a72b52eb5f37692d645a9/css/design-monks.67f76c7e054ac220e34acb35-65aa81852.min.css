@@ -1188,7 +1188,7 @@ figure {
     #5f00e0
   );
   border-style: none;
-  border-color: #7f21ff00;
+  border-color: #21D78900;
   margin: 2px;
   display: block;
 }
@@ -1520,13 +1520,13 @@ figure {
   z-index: 0;
   filter: blur(0.625rem);
   background-image: linear-gradient(
-      #7f21ff99,
+      #21D78999,
       #346dff 29%,
       #bfc765 52%,
       #5041ff 79%,
-      #7f21ff99
+      #21D78999
     ),
-    linear-gradient(25deg, #7f21ff99, #dbdbdbc9 41%, #ffffffe3 61%, #503c7812);
+    linear-gradient(25deg, #21D78999, #dbdbdbc9 41%, #ffffffe3 61%, #503c7812);
   width: 150%;
   height: 150%;
   position: absolute;
@@ -1537,7 +1537,7 @@ figure {
 .bonus-inner-card {
   z-index: 5;
   border-radius: var(--rounded--16);
-  background-image: linear-gradient(#7f21ff, #0f0719 92%);
+  background-image: linear-gradient(#21D789, #0f0719 92%);
   position: relative;
   overflow: hidden;
 }
@@ -2802,9 +2802,9 @@ figure {
 .small-price-table {
   background-image: linear-gradient(
     157deg,
-    #7f21ff99,
-    #7f21ff00 41% 71%,
-    #7f21ff
+    #21D78999,
+    #21D78900 41% 71%,
+    #21D789
   );
   border-radius: 1.5rem;
   padding: 1px;
@@ -4124,7 +4124,7 @@ figure {
     #5f00e0
   );
   border-style: none;
-  border-color: #7f21ff00;
+  border-color: #21D78900;
   margin: 2px;
   display: block;
 }

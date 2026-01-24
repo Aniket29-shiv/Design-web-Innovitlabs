@@ -358,6 +358,12 @@
   --_typography---font--size--7xl: 3.75rem;
   --color--navbar--btn-border-width: 1px;
 }
+html{
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 body {
   overflow-x: hidden;
   width: 100%;

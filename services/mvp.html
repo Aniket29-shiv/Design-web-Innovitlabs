@@ -168,6 +168,51 @@
     </script>
 
     <style>
+      .text-center-unique {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%; 
+}
+
+
+.certifications-grid-unique {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+  margin: 0 auto; 
+  max-width: 450px; 
+}
+
+
+.footer-link-icon-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  white-space: nowrap;
+}
+
+
+.footer-link-block.w-inline-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.rating-number {
+  font-size: 16px;
+  color: #fff;
+}
+
+
+@media (max-width: 479px) {
+  .certifications-grid-unique {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center; 
+  }
+}
       /* New Navbar Design */
       html {
         scroll-behavior: smooth;
@@ -3460,27 +3505,44 @@ a,
                       </div>
                       
                       <div class="footer-link-wrapper">
-                        <h3 class="footer-link-block-title"></h3>
-                        <div class="all-link-block">
-                          <a
-                            href="case-study.html"
-                            class="footer-link-block w-inline-block"
-                            ><div class="footer-link-text"></div></a
-                          ><a
-                            href="products.html"
-                            class="footer-link-block w-inline-block"
-                            ><div class="footer-link-text"></div></a
-                          ><a
-                            href="industry.html"
-                            class="footer-link-block w-inline-block"
-                            ><div class="footer-link-text"></div></a
-                          ><a
-                            href="blog.html"
-                            class="footer-link-block w-inline-block"
-                            ><div class="footer-link-text"></div></a
-                          >
-                        </div>
-                      </div>
+  <h3 class="footer-link-block-title text-center-unique">Certifications</h3>
+  
+  <div class="all-link-block certifications-grid-unique">
+    
+    <a href="index.html" target="_blank" class="footer-link-block w-inline-block">
+      <div class="logo-wrap"><img src="../images/clutch_final_logo.png" width="90" alt="Clutch"></div>
+      <div class="footer-link-icon-wrap">
+        <img loading="lazy" src="../images/star-full.svg" height="20" width="20" alt="" class="footer-link-icon" />
+        <span class="rating-number">5.0</span>
+      </div>
+    </a>
+
+    <a href="index.html" target="_blank" class="footer-link-block w-inline-block">
+      <div class="logo-wrap"><img src="../images/trustpilot.png" width="90" alt="Trustpilot"></div>
+      <div class="footer-link-icon-wrap">
+        <img loading="lazy" src="../images/star-full.svg" height="20" width="20" alt="" class="footer-link-icon" />
+        <span class="rating-number">4.7</span>
+      </div>
+    </a>
+
+    <a href="index.html" target="_blank" class="footer-link-block w-inline-block">
+      <div class="logo-wrap"><img src="../images/goodfrims logo (1).png" width="90" alt="GoodFirms"></div>
+      <div class="footer-link-icon-wrap">
+        <img loading="lazy" src="../images/star-full.svg" height="20" width="20" alt="" class="footer-link-icon" />
+        <span class="rating-number">4.8</span>
+      </div>
+    </a>
+
+    <a href="index.html" target="_blank" class="footer-link-block w-inline-block">
+      <div class="logo-wrap"><img src="../images/google.png" width="90" alt="Google"></div>
+      <div class="footer-link-icon-wrap">
+        <img loading="lazy" src="../images/star-full.svg" height="20" width="20" alt="" class="footer-link-icon" />
+        <span class="rating-number">4.2</span>
+      </div>
+    </a>
+
+  </div>
+</div>
                     </div>
                     
                     <div class="footer-cradit">

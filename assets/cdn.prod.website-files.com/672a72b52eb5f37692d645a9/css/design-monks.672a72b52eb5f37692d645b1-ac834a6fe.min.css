@@ -454,7 +454,7 @@ p {
   line-height: 150%;
 }
 a {
-  color: var(--_theme---base--surface--surface-brand);
+  color: #fafafa;
   text-decoration: none;
   -webkit-text-decoration-color: var(--_theme---base--text--text-secondary);
   text-decoration-color: var(--_theme---base--text--text-secondary);
@@ -3590,8 +3590,7 @@ figure {
   display: grid;
 }
 .pricing_list-wrap.is-first {
-  background-color: var(--color--navbar--bg);
-  background-image: linear-gradient(202deg, #571bd233, #0a0a0a33);
+  background-color: #0F3D33;
   border-radius: 2rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -3813,13 +3812,6 @@ figure {
 .career_list-item {
   z-index: 9999;
   color: var(--text--text-light-gray);
-  background-image: linear-gradient(
-    28.96deg,
-    #ebf8fc80,
-    #7fb8ef80 30%,
-    #5142f180 58%,
-    #1d1d2980
-  );
   border-radius: 2rem;
   width: 100%;
   padding: 0.09375rem;
@@ -3828,11 +3820,7 @@ figure {
   position: relative;
   box-shadow: 0 16px 0.3125rem #0003, inset 0 0.5rem 1.5rem #ffffff17;
 }
-.career_list-item:hover {
-  background-image: linear-gradient(#8820ff, #8f8c8c 94%);
-  box-shadow: 0 -8px 3.125rem 0.5625rem #28B29A,
-    inset 0 1.25rem 3.125rem 0.5625rem #21D789;
-}
+
 .career_list-item-content {
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;

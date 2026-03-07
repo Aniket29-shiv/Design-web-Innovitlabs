@@ -2888,42 +2888,22 @@ figure {
   align-items: center;
 }
 .benefit-card-item-wapper {
-  background-image: linear-gradient(
-    333deg,
-    #c4c4c400 55%,
-    #ececec33 70%,
-    #5f00e0
-  );
   border-radius: 2rem;
   padding: 1px;
   transition: all 0.2s ease-in;
   overflow: hidden;
-  box-shadow: 0 16px 24px #5f00e01a;
 }
 .benefit-card-item-wapper:hover {
-  background-image: linear-gradient(
-    225deg,
-    #ebf8fc,
-    #7fb8ef 27%,
-    #5142f1 58%,
-    #1d1d29 95%
-  );
   margin: -0.5px;
   padding: 1.5px;
-  box-shadow: 0 0 100px #21D78952, 0 16px 24px #5f00e01a;
 }
 .benefit-card-bg {
   z-index: 5;
-  background-color: var(--_theme---base--surface--surface);
-  background-image: linear-gradient(347deg, #571bd233, #0a0a0a33);
+  background-color: #0f3d33;
   border-radius: 2rem;
   width: 100%;
   height: 100%;
   display: block;
-  box-shadow: inset 0 8px 24px #ffffff17;
-}
-.benefit-card-bg:hover {
-  background-image: linear-gradient(347deg, #571bd233, #0a0a0a33);
 }
 .benifit-card-content-wapper {
   grid-column-gap: 1.5rem;

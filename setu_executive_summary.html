@@ -1,0 +1,169 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans)}
+.page{padding:1.5rem 1.75rem;max-width:900px;margin:0 auto}
+.header{display:flex;align-items:flex-start;justify-content:space-between;border-bottom:1.5px solid #1D9E75;padding-bottom:0.9rem;margin-bottom:1.1rem}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:38px;height:38px;background:#1D9E75;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:500;letter-spacing:1px}
+.brand-text h1{font-size:20px;font-weight:500;color:var(--color-text-primary);letter-spacing:1px}
+.brand-text p{font-size:11px;color:var(--color-text-secondary);margin-top:2px}
+.tagline{font-size:11px;color:var(--color-text-secondary);text-align:right;max-width:220px;line-height:1.5}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:1.1rem}
+.metric{background:var(--color-background-secondary);border-radius:8px;padding:0.65rem 0.85rem}
+.metric .val{font-size:18px;font-weight:500;color:var(--color-text-primary)}
+.metric .lbl{font-size:10px;color:var(--color-text-secondary);margin-top:2px;line-height:1.4}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px}
+.box{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:0.75rem 0.9rem}
+.box-full{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:0.75rem 0.9rem;margin-bottom:10px}
+.sec-label{font-size:9px;font-weight:500;letter-spacing:0.8px;text-transform:uppercase;color:#0F6E56;margin-bottom:5px}
+.sec-label-b{font-size:9px;font-weight:500;letter-spacing:0.8px;text-transform:uppercase;color:#185FA5;margin-bottom:5px}
+.sec-label-p{font-size:9px;font-weight:500;letter-spacing:0.8px;text-transform:uppercase;color:#534AB7;margin-bottom:5px}
+.sec-label-a{font-size:9px;font-weight:500;letter-spacing:0.8px;text-transform:uppercase;color:#854F0B;margin-bottom:5px}
+.sec-label-r{font-size:9px;font-weight:500;letter-spacing:0.8px;text-transform:uppercase;color:#A32D2D;margin-bottom:5px}
+ul{padding-left:0;list-style:none}
+li{font-size:11.5px;color:var(--color-text-primary);line-height:1.6;padding-left:12px;position:relative}
+li::before{content:"–";position:absolute;left:0;color:var(--color-text-secondary)}
+.flow{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin-top:4px}
+.ftag{font-size:10px;background:#E1F5EE;color:#0F6E56;border-radius:5px;padding:3px 8px;font-weight:500}
+.arrow{font-size:10px;color:var(--color-text-secondary)}
+.phase-row{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;margin-bottom:5px}
+.phase-badge{font-size:9px;font-weight:500;background:#E6F1FB;color:#185FA5;border-radius:5px;padding:3px 8px;white-space:nowrap}
+.phase-badge-2{font-size:9px;font-weight:500;background:#EEEDFE;color:#534AB7;border-radius:5px;padding:3px 8px;white-space:nowrap}
+.phase-badge-3{font-size:9px;font-weight:500;background:#FAEEDA;color:#854F0B;border-radius:5px;padding:3px 8px;white-space:nowrap}
+.phase-text{font-size:11px;color:var(--color-text-primary);line-height:1.5}
+.footer{margin-top:0.75rem;padding-top:0.65rem;border-top:0.5px solid var(--color-border-tertiary);display:flex;justify-content:space-between;align-items:center}
+.footer p{font-size:10px;color:var(--color-text-secondary)}
+.impact-pill{font-size:10px;background:#EAF3DE;color:#3B6D11;border-radius:5px;padding:3px 9px;font-weight:500}
+</style>
+
+<div class="page">
+
+  <div class="header">
+    <div class="brand">
+      <div class="logo">SETU</div>
+      <div class="brand-text">
+        <h1>SETU Health Platform</h1>
+        <p>Integrated Digital Healthcare Ecosystem — India</p>
+      </div>
+    </div>
+    <div class="tagline">Bridging citizens, doctors, diagnostics,<br>and government through technology</div>
+  </div>
+
+  <div class="metrics">
+    <div class="metric"><div class="val">48</div><div class="lbl">Integrated health modules</div></div>
+    <div class="metric"><div class="val">25+</div><div class="lbl">Diagnostic tests per preventive kit</div></div>
+    <div class="metric"><div class="val">3</div><div class="lbl">Launch phases: Pune → MH → India</div></div>
+    <div class="metric"><div class="val">₹99–₹4,999</div><div class="lbl">Revenue per user per interaction</div></div>
+  </div>
+
+  <div class="grid2">
+    <div class="box">
+      <div class="sec-label-r">Problem</div>
+      <ul>
+        <li>India's healthcare is reactive, not preventive — diagnosis happens too late</li>
+        <li>Rural and semi-urban populations lack access to diagnostics and specialists</li>
+        <li>Health records are fragmented; government schemes remain largely undiscovered</li>
+        <li>Affordability and continuity of care remain critical unmet needs</li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="sec-label">Solution</div>
+      <ul>
+        <li>One platform connecting users to tests, doctors, medicine, and government schemes</li>
+        <li>Home & camp-based diagnostics via a dedicated Lab Technician App</li>
+        <li>Unified digital health record with ABHA integration for every citizen</li>
+        <li>End-to-end care continuity: Test → Report → Doctor → Medicine → Follow-up</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box-full">
+    <div class="sec-label-b">Phase 1 product — 10 launch modules</div>
+    <div class="flow">
+      <span class="ftag">Teleconsultation</span><span class="arrow">·</span>
+      <span class="ftag">Preventive Test Booking</span><span class="arrow">·</span>
+      <span class="ftag">Lab Technician App</span><span class="arrow">·</span>
+      <span class="ftag">PHR + ABHA</span><span class="arrow">·</span>
+      <span class="ftag">Generic Medicine Delivery</span><span class="arrow">·</span>
+      <span class="ftag">Health Checkups</span><span class="arrow">·</span>
+      <span class="ftag">Mental Health</span><span class="arrow">·</span>
+      <span class="ftag">Drug Directory</span><span class="arrow">·</span>
+      <span class="ftag">Emergency Help</span><span class="arrow">·</span>
+      <span class="ftag">Govt Schemes</span>
+    </div>
+  </div>
+
+  <div class="grid3">
+    <div class="box">
+      <div class="sec-label-p">Differentiation</div>
+      <ul>
+        <li>Dual-app model: User + Lab Technician apps</li>
+        <li>IoT-enabled preventive kits (25+ tests)</li>
+        <li>ABHA-linked lifelong PHR</li>
+        <li>Government scheme discovery engine</li>
+        <li>Rural-first design: CSC & camp-ready</li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="sec-label-a">Revenue model</div>
+      <ul>
+        <li>Preventive health packages: ₹999–₹4,999</li>
+        <li>Teleconsultation fees: ₹200–₹500</li>
+        <li>Medicine margins: 15–25%</li>
+        <li>Subscriptions: ₹99–₹299/month</li>
+        <li>B2B corporate health programs</li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="sec-label">Target segments</div>
+      <ul>
+        <li>Urban families — preventive care & wellness</li>
+        <li>Rural population — diagnostics & govt access</li>
+        <li>Doctors & diagnostic labs — digital revenue</li>
+        <li>Corporates & employers — workforce health</li>
+        <li>Govt bodies — data, schemes, public health</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="box">
+      <div class="sec-label-b">Launch plan</div>
+      <div class="phase-row">
+        <span class="phase-badge">Phase 1 · 0–3 mo</span>
+        <div class="phase-text">Pune: 50+ lab technicians, 20 doctors, 10 health camps, 2 BPO teams. Core 10 modules live.</div>
+      </div>
+      <div class="phase-row">
+        <span class="phase-badge-2">Phase 2 · 3–12 mo</span>
+        <div class="phase-text">Maharashtra: District-wise rollout, CSC onboarding, government partnerships, full 48-module suite.</div>
+      </div>
+      <div class="phase-row">
+        <span class="phase-badge-3">Phase 3 · 12 mo+</span>
+        <div class="phase-text">Pan-India: Franchise health camps, AI predictive health, insurance & HMIS integrations.</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="sec-label">Public health impact</div>
+      <ul>
+        <li>Early diagnosis at scale — reducing disease burden</li>
+        <li>ABHA-powered health records for every registered user</li>
+        <li>Government scheme access for underserved populations</li>
+        <li>TB tracking, maternal health, and ASHA worker support</li>
+        <li>Scalable franchise model enabling rural health entrepreneurs</li>
+      </ul>
+      <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap">
+        <span class="impact-pill">Preventive-first</span>
+        <span class="impact-pill">Affordable care</span>
+        <span class="impact-pill">Rural-inclusive</span>
+        <span class="impact-pill">ABDM-compliant</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>SETU Health Platform · Confidential — For investor, government & strategic partner use only</p>
+    <p>Pune, Maharashtra, India · 2024</p>
+  </div>
+
+</div>

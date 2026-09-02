@@ -104,8 +104,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 /* Layout */
 .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(1.1rem,4vw,2rem)}
-.section{padding-block:clamp(3.5rem,7vw,var(--s8));position:relative}
-.section--tight{padding-block:clamp(2.5rem,5vw,4rem)}
+.section{padding-block:clamp(1.25rem,2vw,1.5rem);position:relative}
+.section--tight{padding-block:clamp(1rem,1.6vw,1.25rem)}
 .section--dark{background:var(--navy);color:#B9C4D9;overflow:hidden}
 .section--dark h2,.section--dark h3{color:#fff}
 .section--alt{background:linear-gradient(180deg,rgba(255,255,255,.85),rgba(255,255,255,.35))}
@@ -163,6 +163,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .hdr.is-stuck .logo{color:var(--slate-900)}
 .logo__mark{width:36px;height:36px;border-radius:11px;background:var(--grad-cta);display:grid;place-items:center;box-shadow:var(--sh-blue);flex:none}
 .logo__mark span{color:#fff;font-weight:800;font-size:1.05rem;line-height:1}
+.logo__mark svg{width:17px;height:17px}
 .logo small{display:block;font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.62;line-height:1}
 .nav{display:none;margin-inline:auto;gap:.25rem}
 .nav a{padding:.5rem .8rem;border-radius:var(--r-pill);font-size:.92rem;font-weight:600;color:rgba(255,255,255,.86);transition:color .2s,background .2s}
@@ -271,6 +272,21 @@ button,input,select,textarea{font:inherit;color:inherit}
 .mock__lines span:nth-child(2){width:82%}
 .mock__lines span:nth-child(3){width:64%}
 
+/* Hero visual — portrait filling the empty space above the mock */
+.hero__figure{
+  position:absolute;left:0;right:0;bottom:calc(100% + 18px);
+  border-radius:var(--r-lg);overflow:hidden;height:160px;
+  box-shadow:0 30px 70px rgba(3,8,20,.5),0 0 0 1px rgba(255,255,255,.08);
+}
+.hero__figure img{
+  width:100%;height:100%;object-fit:cover;object-position:top center;display:block;
+  -webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);
+}
+@media (min-width:1000px){
+  .hero__figure{height:clamp(180px,24vw,266px)}
+}
+
 .float{
   position:absolute;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);
   border:1px solid rgba(255,255,255,.7);border-radius:14px;padding:.6rem .85rem;
@@ -340,7 +356,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .ico svg{width:24px;height:24px}
 
 /* ---------- Process ---------- */
-.steps{display:grid;gap:1rem;counter-reset:step;position:relative}
+.steps{display:grid;gap:1rem;counter-reset:step;position:relative;list-style:none;margin:0;padding:0}
 .step{
   background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:1.5rem;
   box-shadow:var(--sh-1);position:relative;transition:transform .35s var(--ease),box-shadow .35s var(--ease);
@@ -550,6 +566,83 @@ button,input,select,textarea{font:inherit;color:inherit}
 .stickycta__t span{font-size:.72rem;color:var(--slate-500);font-weight:600}
 .stickycta .btn{padding:.75rem 1.15rem;font-size:.85rem}
 
+/* ---------- Sticky offer timer strip ---------- */
+:root{--offbar-h:104px}
+.stickyoffer{
+  position:fixed;left:0;right:0;bottom:0;z-index:75;
+  display:flex;align-items:center;flex-wrap:wrap;gap:.9rem 1.75rem;
+  padding:.85rem clamp(1rem,3.5vw,2.25rem);
+  background:linear-gradient(90deg,#F2C230 0%,#FCEEB0 50%,#F2C230 100%);
+  border-top:1px solid rgba(26,20,0,.12);
+  box-shadow:0 -12px 32px rgba(15,23,42,.16);
+}
+.stickyoffer__price{display:flex;flex-direction:column;gap:.2rem;flex:none}
+.stickyoffer__price b{display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap}
+.stickyoffer__was{font-size:.92rem;font-weight:700;color:#6B5713;text-decoration:line-through;opacity:.7}
+.stickyoffer__now{font-size:1.22rem;font-weight:800;color:#1A1400;letter-spacing:-.02em}
+.stickyoffer__note{font-size:.74rem;font-weight:700;color:#6B5713}
+.stickyoffer__meta{display:flex;align-items:center;justify-content:space-evenly;gap:clamp(.9rem,2.6vw,2rem);flex:1;flex-wrap:wrap}
+.stickyoffer__meta li{display:flex;align-items:center;gap:.4rem;font-size:.83rem;font-weight:700;color:#1A1400;white-space:nowrap}
+.stickyoffer__meta svg{width:17px;height:17px;flex:none}
+.stickyoffer__cta{position:relative;display:flex;align-items:center;flex:none}
+.stickyoffer__badge{
+  position:absolute;top:-1.35rem;right:0;background:#1A1400;color:#fff;
+  font-size:.66rem;font-weight:700;letter-spacing:.02em;padding:.3rem .75rem;
+  border-radius:var(--r-pill);box-shadow:0 6px 14px rgba(0,0,0,.24);white-space:nowrap;
+}
+.stickyoffer .btn{--bg:linear-gradient(135deg,#1F2937,#000);color:#fff;padding:.85rem 1.5rem;
+  font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;
+  box-shadow:0 10px 24px rgba(0,0,0,.3);}
+@media (max-width:860px){
+  .stickyoffer__meta li:nth-child(3){display:none}
+}
+@media (max-width:700px){
+  :root{--offbar-h:68px}
+  .stickyoffer{
+    flex-wrap:nowrap;align-items:center;justify-content:space-between;
+    gap:.5rem;padding:.55rem .75rem calc(.55rem + env(safe-area-inset-bottom));
+    text-align:left;
+  }
+  .stickyoffer__price{flex-direction:row;align-items:baseline;gap:.35rem;flex:none;min-width:0}
+  .stickyoffer__price b{gap:.3rem}
+  .stickyoffer__was{display:none}
+  .stickyoffer__now{font-size:.82rem;white-space:nowrap}
+  .stickyoffer__note{display:none}
+  .stickyoffer__meta{display:flex;flex:1;min-width:0;justify-content:flex-start}
+  .stickyoffer__meta li:nth-child(2),.stickyoffer__meta li:nth-child(3){display:none}
+  .stickyoffer__meta li:first-child{
+    font-size:0;gap:.3rem;min-width:0;overflow:hidden;
+  }
+  .stickyoffer__meta li:first-child svg{width:15px;height:15px}
+  .stickyoffer__meta li:first-child #offbarCountdown{
+    font-size:.7rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-block;max-width:100%;
+  }
+  .stickyoffer__cta{flex-direction:row;align-items:center;flex:none}
+  .stickyoffer__badge{display:none}
+  .stickyoffer .btn{width:auto;padding:.55rem .9rem;font-size:.7rem;white-space:nowrap}
+}
+
+/* ---------- Scroll-triggered offer popup ---------- */
+.offerpopup{
+  position:fixed;top:50%;left:50%;z-index:76;
+  display:flex;flex-direction:column;align-items:flex-start;gap:.85rem;
+  width:min(360px,calc(100% - 2rem));
+  padding:1.5rem 1.75rem;border-radius:var(--r-lg);
+  background:linear-gradient(90deg,#F2C230 0%,#FCEEB0 50%,#F2C230 100%);
+  box-shadow:0 24px 60px rgba(15,23,42,.35);
+  transform:translate(-50%,-50%) scale(.94);opacity:0;visibility:hidden;pointer-events:none;
+  transition:transform .35s var(--ease),opacity .35s var(--ease),visibility .35s;
+}
+.offerpopup.show{transform:translate(-50%,-50%) scale(1);opacity:1;visibility:visible;pointer-events:auto}
+.offerpopup__close{
+  position:absolute;top:.65rem;right:.75rem;width:26px;height:26px;border-radius:50%;border:0;
+  background:rgba(26,20,0,.14);color:#1A1400;font-size:1.05rem;line-height:1;
+  display:grid;place-items:center;cursor:pointer;
+}
+.offerpopup__t{margin:0;padding-right:1.3rem;font-size:.98rem;font-weight:700;color:#1A1400}
+.offerpopup .btn{--bg:linear-gradient(135deg,#1F2937,#000);color:#fff;width:100%;
+  padding:.85rem 1.3rem;font-size:.85rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+
 /* ---------- Reveal ---------- */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .rv.in{opacity:1;transform:none}
@@ -588,7 +681,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   .phone{width:150px;right:-6%}
 }
 @media (max-width:999px){
-  .mock{max-width:520px;margin-inline:auto;margin-top:1rem}
+  .mock{max-width:520px;margin-inline:auto;margin-top:194px}
   .float--1,.float--2{left:-2%}
   .float--3,.float--4{right:-2%}
 }
@@ -601,7 +694,10 @@ button,input,select,textarea{font:inherit;color:inherit}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
   .rv{opacity:1;transform:none}
 }
-@media print{.hdr,.fab,.stickycta,.progress{display:none}}
+@media print{.hdr,.fab,.stickycta,.progress,.stickyoffer,.offerpopup{display:none}}
+
+/* Keep the floating call/WhatsApp buttons clear of the sticky offer strip */
+.fab{bottom:calc(var(--offbar-h) + 16px)}
 </style>
 </head>
 <body>
@@ -612,7 +708,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 <header class="hdr" id="hdr">
   <div class="wrap hdr__in">
     <a href="#top" class="logo" aria-label="Innovit Labs home">
-      <span class="logo__mark"><span>i</span></span>
+      <span class="logo__mark"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg></span>
       <span>Innovit Labs<small>Dubai · UAE</small></span>
     </a>
     <nav class="nav" aria-label="Primary">
@@ -724,7 +820,6 @@ button,input,select,textarea{font:inherit;color:inherit}
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.15c-.24.68-1.42 1.3-1.95 1.35-.5.05-.98.24-3.3-.69-2.79-1.1-4.55-3.96-4.69-4.15-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.24-.27.53-.34.71-.34.18 0 .35 0 .51.01.16 0 .38-.06.6.46.24.56.8 1.94.87 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.47-.14.16-.29.36-.42.49-.14.14-.28.29-.12.56.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.21 1.36.27.13.43.11.59-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.55.73 1.81.86.27.13.44.2.51.31.06.11.06.65-.18 1.33Z"/></svg>
           Talk on WhatsApp
         </a>
-        <a href="#contact" class="btn btn--ghost btn--lg" data-track="consult_hero">Book free consultation</a>
       </div>
 
       <div class="trust-row">
@@ -736,6 +831,9 @@ button,input,select,textarea{font:inherit;color:inherit}
     </div>
 
     <div class="mock">
+      <figure class="hero__figure">
+        <img src="images/hero-portrait.jpg" alt="UAE leadership" loading="lazy">
+      </figure>
       <div class="mock__browser">
         <div class="mock__bar">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -866,7 +964,6 @@ button,input,select,textarea{font:inherit;color:inherit}
       </li>
     </ol>
     <div class="btn-row btn-row--center rv" style="margin-top:2.5rem">
-      <a href="#contact" class="btn btn--ghost btn--lg" data-track="consult_process">Book free consultation</a>
       <a href="#" class="btn btn--wa btn--lg" data-wa data-track="wa_process">Ask a question on WhatsApp</a>
     </div>
   </div>
@@ -1278,7 +1375,7 @@ button,input,select,textarea{font:inherit;color:inherit}
     <div class="ftr__grid">
       <div class="ftr__about">
         <a href="#top" class="logo" style="color:#fff">
-          <span class="logo__mark"><span>i</span></span>
+          <span class="logo__mark"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg></span>
           <span>Innovit Labs<small>Dubai · UAE</small></span>
         </a>
         <p>We design and build business websites for companies across Dubai and the UAE — fast to launch, built to generate enquiries, and yours to own.</p>
@@ -1345,6 +1442,97 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="stickycta__t"><b>999 AED website offer</b><span>Limited slots this month</span></div>
   <a href="#contact" class="btn" data-track="cta_sticky">Get my website</a>
 </div>
+
+<!-- ============ STICKY OFFER TIMER STRIP ============ -->
+<div class="stickyoffer" role="complementary" aria-label="Limited-time website offer">
+  <div class="stickyoffer__price">
+    <b><span class="stickyoffer__was">2,499 AED</span><span class="stickyoffer__now">999 AED Only</span></b>
+    <span class="stickyoffer__note">Limited slots this month</span>
+  </div>
+
+  <ul class="stickyoffer__meta">
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+      Offer ends in <span id="offbarCountdown">—</span>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      Live in 5–7 days
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 3v9l6 3"/></svg>
+      30 days support
+    </li>
+  </ul>
+
+  <div class="stickyoffer__cta">
+    <span class="stickyoffer__badge">Slots filling up</span>
+    <a href="#contact" class="btn" data-track="cta_sticky_offer">Claim offer</a>
+  </div>
+</div>
+<script>
+(function(){
+  var el = document.getElementById("offbarCountdown");
+  if (!el) return;
+  function pad(n){ return String(n).padStart(2,"0"); }
+  function tick(){
+    var now = new Date();
+    var end = new Date(now.getFullYear(), now.getMonth()+1, 1, 0,0,0,0);
+    var diff = Math.max(0, end - now);
+    var d = Math.floor(diff/86400000);
+    var h = Math.floor(diff%86400000/3600000);
+    var m = Math.floor(diff%3600000/60000);
+    var s = Math.floor(diff%60000/1000);
+    el.textContent = d+"d "+pad(h)+"h "+pad(m)+"m "+pad(s)+"s";
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+
+<!-- ============ SCROLL-TRIGGERED OFFER POPUP ============ -->
+<div class="offerpopup" id="offerPopup" role="dialog" aria-label="Special offer" aria-hidden="true">
+  <button class="offerpopup__close" id="offerPopupClose" aria-label="Close">&times;</button>
+  <p class="offerpopup__t">Still deciding? <b>999 AED</b> website offer — limited slots this month.</p>
+  <a href="#contact" class="btn" id="offerPopupCta" data-track="cta_scroll_popup">Claim offer</a>
+</div>
+<script>
+(function(){
+  var popup = document.getElementById("offerPopup");
+  var closeBtn = document.getElementById("offerPopupClose");
+  var ctaBtn = document.getElementById("offerPopupCta");
+  if (!popup || !closeBtn || !ctaBtn) return;
+
+  var scrollCount = 0, lastY = window.scrollY, scrollTimer = null, shown = false;
+
+  function showPopup(){
+    if (shown) return;
+    shown = true;
+    popup.classList.add("show");
+    popup.setAttribute("aria-hidden", "false");
+  }
+  function hidePopup(){
+    popup.classList.remove("show");
+    popup.setAttribute("aria-hidden", "true");
+  }
+
+  window.addEventListener("scroll", function(){
+    if (shown) return;
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function(){
+      var y = window.scrollY;
+      if (y > lastY) {
+        scrollCount++;
+        if (scrollCount >= 2) showPopup();
+      }
+      lastY = y;
+    }, 150);
+  }, { passive: true });
+
+  closeBtn.addEventListener("click", hidePopup);
+  ctaBtn.addEventListener("click", hidePopup);
+})();
+</script>
 
 <!-- ============ STRUCTURED DATA ============ -->
 <script type="application/ld+json">
